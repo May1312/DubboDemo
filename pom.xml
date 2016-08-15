@@ -8,6 +8,7 @@
   	<module>DubboTest-provideImpl</module>
   	<module>DubboTest-provideInfa2</module>
   	<module>DubboTest-common</module>
+  	<module>DubboTest-providerImpl2</module>
   </modules>
 	  <dependencies>
 		  	<dependency>

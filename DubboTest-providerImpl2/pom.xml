@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.helian</groupId>
+    <artifactId>DubboDemo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>DubboTest-providerImpl2</artifactId>
+  <packaging>war</packaging>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.helian</groupId>
+  		<artifactId>DubboTest-provideInfa2</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  <build>
+ 		 <plugins>
+	  			<plugin>
+	                <groupId>org.mortbay.jetty</groupId>
+	                <artifactId>jetty-maven-plugin</artifactId>
+	                <configuration>
+	                    <scanIntervalSeconds>0</scanIntervalSeconds>
+	                    <connectors>
+	                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+	                            <port>8090</port>
+	                            <maxIdleTime>60000</maxIdleTime>
+	                        </connector>
+	                    </connectors>
+	                    <webAppConfig>
+	                        <contextPath>/</contextPath>
+	                    </webAppConfig>
+	                </configuration>                
+	            </plugin>  
+            </plugins>        
+ 	 </build>
+</project>
